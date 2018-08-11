@@ -9,7 +9,56 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Onboard View Controller-->
+        <scene sceneID="FfB-j6-Ph1">
+            <objects>
+                <viewController id="Vdg-RE-akp" customClass="OnboardViewController" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B12-QO-ecY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-m5-zgn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-ng-FhH">
+                                        <rect key="frame" x="149.5" y="522" width="75" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="NHs-uy-6s2"/>
+                                            <constraint firstAttribute="width" constant="75" id="tOL-rz-snh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                        <state key="normal" title="SKIP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="OLJ-ng-FhH" firstAttribute="centerX" secondItem="gfr-m5-zgn" secondAttribute="centerX" id="VlF-TG-cNl"/>
+                                    <constraint firstAttribute="bottom" secondItem="OLJ-ng-FhH" secondAttribute="bottom" constant="100" id="hU4-Wr-kFN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gfr-m5-zgn" firstAttribute="bottom" secondItem="yhv-hs-Hnp" secondAttribute="bottom" id="0kt-VK-XgB"/>
+                            <constraint firstItem="gfr-m5-zgn" firstAttribute="trailing" secondItem="yhv-hs-Hnp" secondAttribute="trailing" id="Hee-cb-O4R"/>
+                            <constraint firstItem="gfr-m5-zgn" firstAttribute="leading" secondItem="yhv-hs-Hnp" secondAttribute="leading" id="MIZ-hp-5Rb"/>
+                            <constraint firstItem="gfr-m5-zgn" firstAttribute="top" secondItem="B12-QO-ecY" secondAttribute="top" id="b1G-sm-nDI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yhv-hs-Hnp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75j-aU-hXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-754.39999999999998" y="133.5832083958021"/>
+        </scene>
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
