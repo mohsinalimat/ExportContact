@@ -14,6 +14,7 @@
 		D9032759211F11DF00E6AC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9032758211F11DF00E6AC35 /* Assets.xcassets */; };
 		D903275C211F11DF00E6AC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D903275A211F11DF00E6AC35 /* LaunchScreen.storyboard */; };
 		D9CA840F211F16CB007BE07F /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA840E211F16CB007BE07F /* OnboardViewController.swift */; };
+		D9CA8411211F1847007BE07F /* OnboardingViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA8410211F1847007BE07F /* OnboardingViewClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D903275B211F11DF00E6AC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D903275D211F11DF00E6AC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9CA840E211F16CB007BE07F /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		D9CA8410211F1847007BE07F /* OnboardingViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewClass.swift; sourceTree = "<group>"; };
 		EAB9F44E22C15DEFA3851B44 /* Pods-ExportContact(VCard).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExportContact(VCard).release.xcconfig"; path = "Pods/Target Support Files/Pods-ExportContact(VCard)/Pods-ExportContact(VCard).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				D903275A211F11DF00E6AC35 /* LaunchScreen.storyboard */,
 				D903275D211F11DF00E6AC35 /* Info.plist */,
 				D9CA840E211F16CB007BE07F /* OnboardViewController.swift */,
+				D9CA8410211F1847007BE07F /* OnboardingViewClass.swift */,
 			);
 			path = "ExportContact(VCard)";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CA8411211F1847007BE07F /* OnboardingViewClass.swift in Sources */,
 				D9032754211F11DF00E6AC35 /* HomeScreen.swift in Sources */,
 				D9032752211F11DF00E6AC35 /* AppDelegate.swift in Sources */,
 				D9CA840F211F16CB007BE07F /* OnboardViewController.swift in Sources */,

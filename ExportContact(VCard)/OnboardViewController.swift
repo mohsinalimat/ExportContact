@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import paper_onboarding
 
 class OnboardViewController: UIViewController {
 
+    @IBOutlet weak var skipButtonOutlet: UIButton!
+    @IBOutlet weak var onboardingView: OnboardingViewClass!
+    
+    var userData = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        onboardingView.delegate = self
+        onboardingView.dataSource = self
+    }
+    
+    @IBAction func skipButtonPressed(_ sender: Any) {
+        userData.set(true, forKey: "demoCompleted")
+        userData.synchronize()
     }
 }

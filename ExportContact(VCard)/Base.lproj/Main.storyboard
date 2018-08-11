@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,37 +23,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-m5-zgn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-m5-zgn" customClass="OnboardingViewClass" customModule="ExportContact_VCard_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-ng-FhH">
-                                        <rect key="frame" x="149.5" y="522" width="75" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="NHs-uy-6s2"/>
-                                            <constraint firstAttribute="width" constant="75" id="tOL-rz-snh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
-                                        <state key="normal" title="SKIP">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="OLJ-ng-FhH" firstAttribute="centerX" secondItem="gfr-m5-zgn" secondAttribute="centerX" id="VlF-TG-cNl"/>
-                                    <constraint firstAttribute="bottom" secondItem="OLJ-ng-FhH" secondAttribute="bottom" constant="100" id="hU4-Wr-kFN"/>
-                                </constraints>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-ng-FhH">
+                                <rect key="frame" x="150" y="522" width="75" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="NHs-uy-6s2"/>
+                                    <constraint firstAttribute="width" constant="75" id="tOL-rz-snh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonPressed:" destination="Vdg-RE-akp" eventType="touchUpInside" id="Yow-57-WFY"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ECf-gJ-4Ms"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gfr-m5-zgn" firstAttribute="bottom" secondItem="yhv-hs-Hnp" secondAttribute="bottom" id="0kt-VK-XgB"/>
                             <constraint firstItem="gfr-m5-zgn" firstAttribute="trailing" secondItem="yhv-hs-Hnp" secondAttribute="trailing" id="Hee-cb-O4R"/>
+                            <constraint firstItem="OLJ-ng-FhH" firstAttribute="centerX" secondItem="B12-QO-ecY" secondAttribute="centerX" id="Jsv-uo-22n"/>
                             <constraint firstItem="gfr-m5-zgn" firstAttribute="leading" secondItem="yhv-hs-Hnp" secondAttribute="leading" id="MIZ-hp-5Rb"/>
+                            <constraint firstItem="yhv-hs-Hnp" firstAttribute="bottom" secondItem="OLJ-ng-FhH" secondAttribute="bottom" constant="100" id="VP0-R2-Eqt"/>
                             <constraint firstItem="gfr-m5-zgn" firstAttribute="top" secondItem="B12-QO-ecY" secondAttribute="top" id="b1G-sm-nDI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yhv-hs-Hnp"/>
                     </view>
+                    <connections>
+                        <outlet property="onboardingView" destination="gfr-m5-zgn" id="OHN-io-itV"/>
+                        <outlet property="skipButtonOutlet" destination="OLJ-ng-FhH" id="xD9-IV-9u0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75j-aU-hXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
