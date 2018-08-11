@@ -40,8 +40,14 @@ extension OnboardViewController: PaperOnboardingDelegate, PaperOnboardingDataSou
         let bgThree = #colorLiteral(red: 0.3685051203, green: 0.7292535901, blue: 0.4907024503, alpha: 1)
         let textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
+        let titleFont = UIFont(name: "AvenirNext-Bold", size: 25)!
+        let descFont = UIFont(name: "AvenirNext-DemiBold", size: 18)!
+        
         return [
-        ][index]
+                (#imageLiteral(resourceName: "export"), "Kişilerinizi Yedekleyin!", "Export Contact ile rehberinizi kolayca yedekleyebilirsiniz. Yedeklemek için sabırsızlaıyor musun? O zaman devam et...", #imageLiteral(resourceName: "active"), bgOne, textColor, textColor, titleFont, descFont),
+                (#imageLiteral(resourceName: "contact"), "Rehberinizi Yedeklemek Hiç Bu Kadar Kolay Olmamıştı?", "Export Contact ile ücretli yedekleme uygulamalarını unutacaksınız. İki adımda yedeklemenın keyfini çıkarın", #imageLiteral(resourceName: "active"), bgTwo, textColor, textColor, titleFont, descFont),
+                (#imageLiteral(resourceName: "csv"), "İster CSV ister VCARD olarak yedekle!", "Hangi uzantı ile yedeklemek istersin CSV olarak mı? VCARD olarak mı?", #imageLiteral(resourceName: "active"), bgThree, textColor, textColor, titleFont, descFont)
+                ][index]
     }
     
     func onboardingDidTransitonToIndex(_ index: Int) {
