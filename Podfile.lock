@@ -1,0 +1,24 @@
+PODS:
+  - paper-onboarding (2.2)
+  - RevealingSplashView (0.4.0)
+  - SwiftyButton (0.7.0)
+
+DEPENDENCIES:
+  - paper-onboarding
+  - RevealingSplashView
+  - SwiftyButton
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - paper-onboarding
+    - RevealingSplashView
+    - SwiftyButton
+
+SPEC CHECKSUMS:
+  paper-onboarding: 7fcb8f2737edb32bd345d6e890578fff1a073fef
+  RevealingSplashView: 72be158ad5e1bc72713e8f78383dc3e1803ce4d1
+  SwiftyButton: f0982849c00ef5a0ed0852202d00201af0943000
+
+PODFILE CHECKSUM: b95e77cb1c1a628df8877fddddf4b84c703abb98
+
+COCOAPODS: 1.5.3

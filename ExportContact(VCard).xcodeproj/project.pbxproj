@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5953FB425A2457549F0A171A /* Pods_ExportContact_VCard_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7209709A9E6B4239C24DF81 /* Pods_ExportContact_VCard_.framework */; };
 		D9032752211F11DF00E6AC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9032751211F11DF00E6AC35 /* AppDelegate.swift */; };
-		D9032754211F11DF00E6AC35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9032753211F11DF00E6AC35 /* ViewController.swift */; };
+		D9032754211F11DF00E6AC35 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9032753211F11DF00E6AC35 /* HomeScreen.swift */; };
 		D9032757211F11DF00E6AC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9032755211F11DF00E6AC35 /* Main.storyboard */; };
 		D9032759211F11DF00E6AC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9032758211F11DF00E6AC35 /* Assets.xcassets */; };
 		D903275C211F11DF00E6AC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D903275A211F11DF00E6AC35 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6BEBEF5953EA90C93F36CAB /* Pods-ExportContact(VCard).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExportContact(VCard).debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExportContact(VCard)/Pods-ExportContact(VCard).debug.xcconfig"; sourceTree = "<group>"; };
+		B7209709A9E6B4239C24DF81 /* Pods_ExportContact_VCard_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExportContact_VCard_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D903274E211F11DF00E6AC35 /* ExportContact(VCard).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExportContact(VCard).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9032751211F11DF00E6AC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9032753211F11DF00E6AC35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9032753211F11DF00E6AC35 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		D9032756211F11DF00E6AC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9032758211F11DF00E6AC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D903275B211F11DF00E6AC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D903275D211F11DF00E6AC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAB9F44E22C15DEFA3851B44 /* Pods-ExportContact(VCard).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExportContact(VCard).release.xcconfig"; path = "Pods/Target Support Files/Pods-ExportContact(VCard)/Pods-ExportContact(VCard).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5953FB425A2457549F0A171A /* Pods_ExportContact_VCard_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B257FA3F5E212DEE76170AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6BEBEF5953EA90C93F36CAB /* Pods-ExportContact(VCard).debug.xcconfig */,
+				EAB9F44E22C15DEFA3851B44 /* Pods-ExportContact(VCard).release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D9032745211F11DF00E6AC35 = {
 			isa = PBXGroup;
 			children = (
 				D9032750211F11DF00E6AC35 /* ExportContact(VCard) */,
 				D903274F211F11DF00E6AC35 /* Products */,
+				3B257FA3F5E212DEE76170AA /* Pods */,
+				F84C321DBB58504F577DF2D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +71,21 @@
 			isa = PBXGroup;
 			children = (
 				D9032751211F11DF00E6AC35 /* AppDelegate.swift */,
-				D9032753211F11DF00E6AC35 /* ViewController.swift */,
+				D9032753211F11DF00E6AC35 /* HomeScreen.swift */,
 				D9032755211F11DF00E6AC35 /* Main.storyboard */,
 				D9032758211F11DF00E6AC35 /* Assets.xcassets */,
 				D903275A211F11DF00E6AC35 /* LaunchScreen.storyboard */,
 				D903275D211F11DF00E6AC35 /* Info.plist */,
 			);
 			path = "ExportContact(VCard)";
+			sourceTree = "<group>";
+		};
+		F84C321DBB58504F577DF2D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7209709A9E6B4239C24DF81 /* Pods_ExportContact_VCard_.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9032760211F11DF00E6AC35 /* Build configuration list for PBXNativeTarget "ExportContact(VCard)" */;
 			buildPhases = (
+				829D96278385EC1C9E62AD65 /* [CP] Check Pods Manifest.lock */,
 				D903274A211F11DF00E6AC35 /* Sources */,
 				D903274B211F11DF00E6AC35 /* Frameworks */,
 				D903274C211F11DF00E6AC35 /* Resources */,
+				9F254A93D2EBACDFAC7A243B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,12 +157,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		829D96278385EC1C9E62AD65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExportContact(VCard)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F254A93D2EBACDFAC7A243B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ExportContact(VCard)/Pods-ExportContact(VCard)-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExportContact(VCard)/Pods-ExportContact(VCard)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D903274A211F11DF00E6AC35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9032754211F11DF00E6AC35 /* ViewController.swift in Sources */,
+				D9032754211F11DF00E6AC35 /* HomeScreen.swift in Sources */,
 				D9032752211F11DF00E6AC35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +341,13 @@
 		};
 		D9032761211F11DF00E6AC35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BEBEF5953EA90C93F36CAB /* Pods-ExportContact(VCard).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DVHX5WRRH;
 				INFOPLIST_FILE = "ExportContact(VCard)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mustafagunes.ExportContact-VCard-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +358,13 @@
 		};
 		D9032762211F11DF00E6AC35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB9F44E22C15DEFA3851B44 /* Pods-ExportContact(VCard).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DVHX5WRRH;
 				INFOPLIST_FILE = "ExportContact(VCard)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mustafagunes.ExportContact-VCard-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
