@@ -10,26 +10,30 @@ import UIKit
 import paper_onboarding
 
 class OnboardViewController: UIViewController {
-
-    @IBOutlet weak var skipButtonOutlet: UIButton!
+    
     @IBOutlet weak var onboardingView: OnboardingViewClass!
+    @IBOutlet weak var skipBtnOutlet: UIButton!
     
     var userData = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        onboardingView.delegate = self
         onboardingView.dataSource = self
+        onboardingView.delegate = self
     }
     
-    @IBAction func skipButtonPressed(_ sender: Any) {
+    @IBAction func skipBtnPressed(_ sender: Any) {
         userData.set(true, forKey: "demoCompleted")
         userData.synchronize()
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
-extension OnboardViewController: PaperOnboardingDelegate, PaperOnboardingDataSource {
+extension OnboardViewController: PaperOnboardingDataSource, PaperOnboardingDelegate {
     func onboardingItemsCount() -> Int {
         return 3
     }
@@ -44,26 +48,25 @@ extension OnboardViewController: PaperOnboardingDelegate, PaperOnboardingDataSou
         let descFont = UIFont(name: "AvenirNext-DemiBold", size: 18)!
         
         return [
-                (#imageLiteral(resourceName: "export"), "Kişilerinizi Yedekleyin!", "Export Contact ile rehberinizi kolayca yedekleyebilirsiniz. Yedeklemek için sabırsızlaıyor musun? O zaman devam et...", #imageLiteral(resourceName: "active"), bgOne, textColor, textColor, titleFont, descFont),
-                (#imageLiteral(resourceName: "contact"), "Rehberinizi Yedeklemek Hiç Bu Kadar Kolay Olmamıştı?", "Export Contact ile ücretli yedekleme uygulamalarını unutacaksınız. İki adımda yedeklemenın keyfini çıkarın", #imageLiteral(resourceName: "active"), bgTwo, textColor, textColor, titleFont, descFont),
-                (#imageLiteral(resourceName: "csv"), "İster CSV ister VCARD olarak yedekle!", "Hangi uzantı ile yedeklemek istersin CSV olarak mı? VCARD olarak mı?", #imageLiteral(resourceName: "active"), bgThree, textColor, textColor, titleFont, descFont)
-                ][index]
+            (#imageLiteral(resourceName: "export"), "Kişilerinizi Yedekleyin!", "Export Contact ile rehberinizi kolayca yedekleyebilirsiniz. Yedeklemek için sabırsızlaıyor musun? O zaman devam et...", #imageLiteral(resourceName: "active"), bgOne, textColor, textColor, titleFont, descFont),
+            (#imageLiteral(resourceName: "contact"), "Yedeklemek bu kadar kolay", "Export Contact ile ücretli yedekleme uygulamalarını unutacaksınız. İki adımda yedeklemenın keyfini çıkarın", #imageLiteral(resourceName: "active"), bgTwo, textColor, textColor, titleFont, descFont),
+            (#imageLiteral(resourceName: "csv"), "CSV? - VCARD?", "Hangi uzantı ile yedeklemek istersin CSV olarak mı? VCARD olarak mı?", #imageLiteral(resourceName: "active"), bgThree, textColor, textColor, titleFont, descFont)
+            ][index]
     }
     
     func onboardingDidTransitonToIndex(_ index: Int) {
         if index == 2 {
-            skipButtonOutlet.isHidden = false
+            skipBtnOutlet.isHidden = false
         }
     }
     
     func onboardingWillTransitonToIndex(_ index: Int) {
         if index != 2 {
-            if skipButtonOutlet.isHidden == false {
-                skipButtonOutlet.isHidden = true
+            if skipBtnOutlet.isHidden == false {
+                skipBtnOutlet.isHidden = true
             }
         }
     }
-    
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
         // TODO : ...
     }

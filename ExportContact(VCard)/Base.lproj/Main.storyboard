@@ -18,7 +18,7 @@
         <!--Onboard View Controller-->
         <scene sceneID="FfB-j6-Ph1">
             <objects>
-                <viewController id="Vdg-RE-akp" customClass="OnboardViewController" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DemoBoard" id="Vdg-RE-akp" customClass="OnboardViewController" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B12-QO-ecY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,8 +38,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="skipButtonPressed:" destination="Vdg-RE-akp" eventType="touchUpInside" id="Yow-57-WFY"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ECf-gJ-4Ms"/>
+                                    <action selector="skipBtnPressed:" destination="Vdg-RE-akp" eventType="touchUpInside" id="yGR-G6-jHB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="F1g-fS-kuN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,18 +55,18 @@
                         <viewLayoutGuide key="safeArea" id="yhv-hs-Hnp"/>
                     </view>
                     <connections>
-                        <outlet property="onboardingView" destination="gfr-m5-zgn" id="OHN-io-itV"/>
-                        <outlet property="skipButtonOutlet" destination="OLJ-ng-FhH" id="xD9-IV-9u0"/>
+                        <outlet property="onboardingView" destination="gfr-m5-zgn" id="cpy-XL-oDE"/>
+                        <outlet property="skipBtnOutlet" destination="OLJ-ng-FhH" id="YYA-nJ-TQL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75j-aU-hXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-754.39999999999998" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-738" y="134"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeScreen" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainAppBoard" id="BYZ-38-t0r" customClass="HomeScreen" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
