@@ -119,6 +119,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="exportButton" destination="g72-lw-ela" id="czg-B6-ASH"/>
+                        <outlet property="loadContactButton" destination="bgv-PI-gGV" id="iSd-9O-CQY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
