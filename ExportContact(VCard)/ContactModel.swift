@@ -12,8 +12,8 @@ import Foundation
 
 class ContactModel {
     
-    var fetchingContactCallback: ((Int) -> Void)?
-    var exportingContactCallback: ((URL) -> Void)?
+    var fetchingContactsCallback: ((Int) -> Void)?
+    var exportingContactsCallback: ((URL) -> Void)?
     var contacts = [CNContact]()
     
     init() {
@@ -28,7 +28,7 @@ class ContactModel {
             try store.enumerateContacts(with: request, usingBlock: { (contact, stop) in
                 self.contacts.append(contact)
             })
-            fetchingContactCallback!(self.contacts.count)
+            fetchingContactsCallback!(self.contacts.count)
             //self.quantity.text = "\(String(describing: self.contacts!.count)) contacts"
             self.contacts.forEach{ (contact) in
                 print(contact.phoneNumbers.count)
@@ -36,6 +36,28 @@ class ContactModel {
             print(self.contacts.count)
         } catch is NSError {
             print("Cant fetch contacts")
+        }
+    }
+    
+    func exportContacts() {
+        let fileName = "contacts.vcard"
+        var fileText = "Name, Given Name, Family Name, Phone 1 - Type, Phone 1 - Value"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+        
+        contacts.forEach { (contact) in
+            if let number = contact.phoneNumbers.first?.value.stringValue {
+                print(number)
+                fileText.append("\n\(contact.givenName),\(contact.givenName),\(contact.familyName),Mobile,\(number)")
+            }
+        }
+        
+        do {
+            try fileText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+            exportingContactsCallback!(path!)
+        }
+        catch {
+            print("Failed to create file")
+            print("\(error)")
         }
     }
 }
