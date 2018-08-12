@@ -12,9 +12,10 @@ import Foundation
 
 class ContactModel {
     
+    var fileExtension: String?
+    var contacts = [CNContact]()
     var fetchingContactsCallback: ((Int) -> Void)?
     var exportingContactsCallback: ((URL) -> Void)?
-    var contacts = [CNContact]()
     
     init() {
     }
@@ -40,7 +41,7 @@ class ContactModel {
     }
     
     func exportContacts() {
-        let fileName = "contacts.vcard"
+        let fileName = "Contacts\(fileExtension as! String)"
         var fileText = "Name, Given Name, Family Name, Phone 1 - Type, Phone 1 - Value"
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         

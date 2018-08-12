@@ -22,8 +22,8 @@ class HomeScreen: UIViewController {
         
         // TODO : Kişileri getir denildiğinde alert ile ekrana kaç kişi olduğunu göstert.
         buttonColorSet()
-        model.fetchingContactCallback = updateLabelFetchingCallback
-        model.exportingContactCallback = exportToCSV_VCARDCallback
+        model.fetchingContactsCallback = updateLabelFetchingCallback
+        model.exportingContactsCallback = exportToCSV_VCARDCallback
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -48,6 +48,7 @@ class HomeScreen: UIViewController {
     
     @IBAction func exportButtonPressed(_ sender: Any) {
         fileExtension()
+        //model.exportContacts()
     }
     
     func updateLabelFetchingCallback(numberOfContact: Int){
@@ -61,11 +62,15 @@ class HomeScreen: UIViewController {
     func fileExtension() {
         let alertController = UIAlertController(title: "Deneme", message: "alertMessage", preferredStyle: .actionSheet)
         
-        let VCARD = UIAlertAction(title: "VCARD", style: .default) { (alert) in
-            print("alert1 çalışıyor")
+        let VCARD = UIAlertAction(title: "VCARD (Recommend)", style: .default) { (alert) in
+            self.model.fileExtension = ".vcard"
+            self.model.exportContacts()
+            print("VCARD")
         }
         let CSV = UIAlertAction(title: "CSV", style: .default) { (alert2) in
-            print("alert2 çalışıyor")
+            self.model.fileExtension = ".csv"
+            self.model.exportContacts()
+            print("CSV")
         }
         let alertCancel = UIAlertAction(title: "CLOSE", style: .destructive, handler: nil)
         
