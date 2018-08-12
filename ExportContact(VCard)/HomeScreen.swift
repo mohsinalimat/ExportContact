@@ -21,10 +21,9 @@ class HomeScreen: UIViewController {
         super.viewDidLoad()
         
         // TODO : Kişileri getir denildiğinde alert ile ekrana kaç kişi olduğunu göstert.
-        
-        model.exportingContactCallback = exportToCSV_VCARDCallback
         buttonColorSet()
-        //buttonCreate_SetupLayout()
+        model.fetchingContactCallback = updateLabelFetchingCallback
+        model.exportingContactCallback = exportToCSV_VCARDCallback
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -41,33 +40,35 @@ class HomeScreen: UIViewController {
         loadContactButton.colors = .init(button: UIColor(red:0.87, green:0.29, blue:0.25, alpha:1.0), shadow: UIColor(red:0.75, green:0.22, blue:0.17, alpha:1.0))
     }
     
-    func buttonAddTarget() {
-        exportButton.addTarget(nil, action: #selector(self.exportButtonPressed), for: .touchUpInside)
-        loadContactButton.addTarget(nil, action: #selector(self.loadButtonPressed), for: .touchUpInside) // UIAlert çalıştırarak seçilen satıra göre işlem yapacak.
+    @IBAction func loadButtonPressed(_ sender: Any) {
+        model.fetchContactList()
     }
-
-    @objc func exportButtonPressed() {
+    
+    @IBAction func exportButtonPressed(_ sender: Any) {
         fileExtension()
     }
     
-    @objc func loadButtonPressed() {
+    func updateLabelFetchingCallback(numberOfContact: Int){
+        let alertContactsCount = UIAlertController(title: "", message: "Contacts Count : \(numberOfContact)", preferredStyle: .alert)
+        let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
         
-        // TODO : alertaction'da neye basarsa onun uzantısını alacak.
+        alertContactsCount.addAction(OK)
+        self.present(alertContactsCount, animated: true, completion: nil)
     }
     
     func fileExtension() {
         let alertController = UIAlertController(title: "Deneme", message: "alertMessage", preferredStyle: .actionSheet)
         
-        let alert = UIAlertAction(title: "VCARD", style: .default) { (alert) in
+        let VCARD = UIAlertAction(title: "VCARD", style: .default) { (alert) in
             print("alert1 çalışıyor")
         }
-        let alert2 = UIAlertAction(title: "CSV", style: .default) { (alert2) in
+        let CSV = UIAlertAction(title: "CSV", style: .default) { (alert2) in
             print("alert2 çalışıyor")
         }
         let alertCancel = UIAlertAction(title: "CLOSE", style: .destructive, handler: nil)
         
-        alertController.addAction(alert)
-        alertController.addAction(alert2)
+        alertController.addAction(CSV)
+        alertController.addAction(VCARD)
         alertController.addAction(alertCancel)
         self.present(alertController, animated: true, completion: nil)
     }
