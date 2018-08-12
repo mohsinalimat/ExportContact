@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,6 +12,7 @@
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
             <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -20,15 +21,15 @@
             <objects>
                 <viewController storyboardIdentifier="DemoBoard" id="Vdg-RE-akp" customClass="OnboardViewController" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B12-QO-ecY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-m5-zgn" customClass="OnboardingViewClass" customModule="ExportContact_VCard_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-ng-FhH">
-                                <rect key="frame" x="150" y="522" width="75" height="45"/>
+                                <rect key="frame" x="169.66666666666666" y="591" width="75" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="NHs-uy-6s2"/>
                                     <constraint firstAttribute="width" constant="75" id="tOL-rz-snh"/>
@@ -68,29 +69,60 @@
             <objects>
                 <viewController storyboardIdentifier="MainAppBoard" id="BYZ-38-t0r" customClass="HomeScreen" customModule="ExportContact_VCard_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-PI-gGV" customClass="PressableButton" customModule="SwiftyButton">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41024881601333618" green="0.9194176197052002" blue="0.29835990071296692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-PI-gGV" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                <color key="backgroundColor" red="0.9067273736000061" green="0.29983478784561157" blue="0.23439124226570129" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="368" id="Ypn-1d-elZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                <color key="tintColor" red="0.90664917230606079" green="0.29804337024688721" blue="0.23436382412910461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Load Contact">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.75044447183609009" green="0.2236882746219635" blue="0.16721993684768677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g72-lw-ela" customClass="PressableButton" customModule="SwiftyButton">
-                                <rect key="frame" x="0.0" y="334" width="375" height="333.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.75294117650000003" green="0.22352941179999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g72-lw-ela" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="0.0" y="368" width="414" height="368"/>
+                                <color key="backgroundColor" red="0.36124244332313538" green="0.72019296884536743" blue="0.36182320117950439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="368" id="4dI-C2-e1d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="67"/>
+                                <state key="normal" title="Export">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.26159226894378662" green="0.60758107900619507" blue="0.26409953832626343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bgv-PI-gGV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0O0-X0-KgH"/>
+                            <constraint firstItem="g72-lw-ela" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GRQ-pP-05R"/>
+                            <constraint firstItem="bgv-PI-gGV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oal-Em-ebD"/>
+                            <constraint firstItem="g72-lw-ela" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U8w-cf-fL2"/>
+                            <constraint firstItem="bgv-PI-gGV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hax-AX-PJo"/>
+                            <constraint firstItem="g72-lw-ela" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="m4n-6C-2qT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="44.927536231884062" y="132.88043478260872"/>
         </scene>
     </scenes>
 </document>
