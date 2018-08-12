@@ -19,14 +19,14 @@ class HomeScreen: UIViewController {
         // TODO : Kişileri getir denildiğinde alert ile ekrana kaç kişi olduğunu göstert.
         
         model.exportingContactCallback = exportToCSV_VCARDCallback
-        buttonCreate_SetupLayout()
+        //buttonCreate_SetupLayout()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func exportToCSV_VCARDCallback(path: URL){
+    func exportToCSV_VCARDCallback(path: URL) {
         let vc = UIActivityViewController(activityItems: [path], applicationActivities: [])
         present(vc, animated: true, completion: nil)
     }
