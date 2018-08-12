@@ -48,7 +48,6 @@ class HomeScreen: UIViewController {
     
     @IBAction func exportButtonPressed(_ sender: Any) {
         fileExtension()
-        //model.exportContacts()
     }
     
     func updateLabelFetchingCallback(numberOfContact: Int){
@@ -66,11 +65,13 @@ class HomeScreen: UIViewController {
             self.model.fileExtension = ".vcard"
             self.model.exportContacts()
             print("VCARD")
+            self.exportButton.setTitle("Exported as VCARD", for: .normal)
         }
         let CSV = UIAlertAction(title: "CSV", style: .default) { (alert2) in
             self.model.fileExtension = ".csv"
             self.model.exportContacts()
             print("CSV")
+            self.exportButton.setTitle("Exported as CSV", for: .normal)
         }
         let alertCancel = UIAlertAction(title: "CLOSE", style: .destructive, handler: nil)
         
