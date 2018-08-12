@@ -42,6 +42,8 @@ class HomeScreen: UIViewController {
     
     @IBAction func loadButtonPressed(_ sender: Any) {
         model.fetchContactList()
+        loadContactButton.isEnabled = false
+        loadContactButton.setTitle("Contacts Loaded", for: .normal)
     }
     
     @IBAction func exportButtonPressed(_ sender: Any) {
@@ -49,7 +51,7 @@ class HomeScreen: UIViewController {
     }
     
     func updateLabelFetchingCallback(numberOfContact: Int){
-        let alertContactsCount = UIAlertController(title: "", message: "Contacts Count : \(numberOfContact)", preferredStyle: .alert)
+        let alertContactsCount = UIAlertController(title: "Contacts Count : \(numberOfContact)", message: "Next Step : Export Button Pressed", preferredStyle: .alert)
         let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alertContactsCount.addAction(OK)
