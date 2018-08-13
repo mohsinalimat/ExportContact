@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyButton
+import RevealingSplashView
 
 class HomeScreen: UIViewController {
 
@@ -16,9 +17,15 @@ class HomeScreen: UIViewController {
     @IBOutlet weak var loadContactButton: PressableButton!
     
     private var model = ContactModel()
+    let splashView = RevealingSplashView(iconImage: UIImage(named: "appLogo")!, iconInitialSize: CGSize(width: 60, height: 60), backgroundColor: UIColor.white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addSubview(splashView)
+        splashView.duration = 1.6
+        splashView.animationType = .popAndZoomOut
+        splashView.startAnimation()
         
         buttonColorSet()
         model.exportingContactsCallback = exportToCSV_VCARDCallback
