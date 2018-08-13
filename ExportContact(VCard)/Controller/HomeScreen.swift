@@ -20,10 +20,9 @@ class HomeScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO : Kişileri getir denildiğinde alert ile ekrana kaç kişi olduğunu göstert.
         buttonColorSet()
-        model.fetchingContactsCallback = updateLabelFetchingCallback
         model.exportingContactsCallback = exportToCSV_VCARDCallback
+        model.fetchingContactsCallback = updateLabelFetchingCallback
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -31,8 +30,8 @@ class HomeScreen: UIViewController {
     }
     
     func exportToCSV_VCARDCallback(path: URL) {
-        let vc = UIActivityViewController(activityItems: [path], applicationActivities: [])
-        present(vc, animated: true, completion: nil)
+        let VC = UIActivityViewController(activityItems: [path], applicationActivities: [])
+        present(VC, animated: true, completion: nil)
     }
     
     func buttonColorSet() {
@@ -51,21 +50,21 @@ class HomeScreen: UIViewController {
     }
     
     func updateLabelFetchingCallback(numberOfContact: Int){
-        let alertContactsCount = UIAlertController(title: "Contacts Count : \(numberOfContact)", message: "Next Step : Export Button Pressed", preferredStyle: .alert)
         let OK = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alertContactsCount = UIAlertController(title: "Contacts Count : \(numberOfContact)", message: "Next Step : Export Button Pressed", preferredStyle: .alert)
         
         alertContactsCount.addAction(OK)
         self.present(alertContactsCount, animated: true, completion: nil)
     }
     
     func fileExtension() {
-        let alertController = UIAlertController(title: "Deneme", message: "alertMessage", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "", message: "Select file extension", preferredStyle: .actionSheet)
         
         let VCARD = UIAlertAction(title: "VCARD (Recommend)", style: .default) { (alert) in
             self.model.fileExtension = ".vcard"
             self.model.exportContacts()
             print("VCARD")
-            self.exportButton.setTitle("Exported as VCARD", for: .normal)
+            self.exportButton.setTitle("Exported as vCard", for: .normal)
         }
         let CSV = UIAlertAction(title: "CSV", style: .default) { (alert2) in
             self.model.fileExtension = ".csv"

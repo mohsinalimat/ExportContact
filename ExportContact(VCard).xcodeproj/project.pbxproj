@@ -76,17 +76,41 @@
 		D9032750211F11DF00E6AC35 /* ExportContact(VCard) */ = {
 			isa = PBXGroup;
 			children = (
+				D9E25E2A2121B73C006DFD39 /* Model */,
+				D9E25E292121B735006DFD39 /* Controller */,
+				D9E25E282121B723006DFD39 /* UI */,
 				D9032751211F11DF00E6AC35 /* AppDelegate.swift */,
-				D9032753211F11DF00E6AC35 /* HomeScreen.swift */,
-				D9CA840E211F16CB007BE07F /* OnboardViewController.swift */,
-				D968C075211F385B00945E82 /* OnboardingViewClass.swift */,
-				D9032755211F11DF00E6AC35 /* Main.storyboard */,
-				D9032758211F11DF00E6AC35 /* Assets.xcassets */,
-				D903275A211F11DF00E6AC35 /* LaunchScreen.storyboard */,
 				D903275D211F11DF00E6AC35 /* Info.plist */,
-				D9C41C5F211F4BAB00A66B42 /* ContactModel.swift */,
 			);
 			path = "ExportContact(VCard)";
+			sourceTree = "<group>";
+		};
+		D9E25E282121B723006DFD39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D9032758211F11DF00E6AC35 /* Assets.xcassets */,
+				D9032755211F11DF00E6AC35 /* Main.storyboard */,
+				D903275A211F11DF00E6AC35 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D9E25E292121B735006DFD39 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9032753211F11DF00E6AC35 /* HomeScreen.swift */,
+				D9CA840E211F16CB007BE07F /* OnboardViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9E25E2A2121B73C006DFD39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9C41C5F211F4BAB00A66B42 /* ContactModel.swift */,
+				D968C075211F385B00945E82 /* OnboardingViewClass.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F84C321DBB58504F577DF2D0 /* Frameworks */ = {
