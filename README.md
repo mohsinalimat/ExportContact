@@ -23,6 +23,8 @@ Aşağıda uygulamada için kullanılan araçlar ve kütüphanelerin listesi yer
     - ```git add -A``` - Bulunduğunuz dosyadaki bütün parçaları alır.
     - ```git commit -m "<description>"``` - Yaptığınız değişikliklerden sonra versiyonla alakalı açıklama kısmı.
     - ```git push -u origin master``` - Yukarıdakileri sırası ile yaptıysanız, bu komutla Github, Gitlab ve BitBucket gibi depolara projenizi gönderebilirsiniz
+
+**Not:** Yukarıdaki komutlar git içerisindeki bazı komutlardır. Komutların tamamı için : [GIT Docs](https://git-scm.com/docs)
     
 Projeyi İndirme & Kurma
 -----------------------
