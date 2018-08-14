@@ -14,12 +14,12 @@
 ------
 Aşağıda uygulamada için kullanılan araçlar ve kütüphanelerin listesi yer alıyor.
 
-1. POD - Üçüncü parti kütüphaneleri yüklediğim araç
+1. **POD** - Üçüncü parti kütüphaneleri yüklediğim araç
     - [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) - Basma efektli swift'e import edilmiş güzel bir kütüphane.
     - [paper-onboarding](https://github.com/Ramotion/paper-onboarding) - Uygulama başlangıcında bilgilendirme ekranı için yazılmış.
     - [RevealingSplashView](https://github.com/PiXeL16/RevealingSplashView) - Uygulama başlangıcında LaunchScreen'i kullanarak efektli uygulama başlangıcı sağlıyor.
     
-2. GIT - Versiyon Kontrol
+2. **GIT - Versiyon Kontrol**
     - ```git add -A``` - Bulunduğunuz dosyadaki bütün parçaları alır.
     - ```git commit -m "<description>"``` - Yaptığınız değişikliklerden sonra versiyonla alakalı açıklama kısmı.
     - ```git push -u origin master``` - Yukarıdakileri sırası ile yaptıysanız, bu komutla Github, Gitlab ve BitBucket gibi depolara projenizi gönderebilirsiniz
@@ -29,12 +29,12 @@ Aşağıda uygulamada için kullanılan araçlar ve kütüphanelerin listesi yer
 Projeyi İndirme & Kurma
 -----------------------
 
-* Elle Kurulum
+* **Elle Kurulum**
     - [Bu linke tıkyarak projeyi .zip olarak indirin](https://github.com/mustafagunes/ExportContact/archive/master.zip)
     - İndirme işlemi bittikten sonra, dosyaları çıkartın.
-    - Ardından ExportContact(VCard).xcworkspace çift tıklayarak projeyi çalıştırın.
+    - Ardından **ExportContact(VCard).xcworkspace** çift tıklayarak projeyi çalıştırın.
 
-* Terminal ile Kurulum
+* **Terminal ile Kurulum**
     - Aşağıdaki komutları sırasıyla terminale yazın ve çalıştırın:
         * ```git clone https://github.com/mustafagunes/ExportContact.git```
         * ```cd ExportContact```
