@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="width" constant="75" id="tOL-rz-snh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
-                                <state key="normal" title="GEÇ">
+                                <state key="normal" title="SKIP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75j-aU-hXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-738" y="134"/>
+            <point key="canvasLocation" x="-1052" y="134"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">

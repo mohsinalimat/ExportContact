@@ -48,9 +48,9 @@ extension OnboardViewController: PaperOnboardingDataSource, PaperOnboardingDeleg
         let descFont = UIFont(name: "AvenirNext-DemiBold", size: 18)!
         
         return [
-            (#imageLiteral(resourceName: "export"), "Kişilerinizi Yedekleyin!", "Export Contact ile rehberinizi kolayca yedekleyebilirsiniz. Yedeklemek için sabırsızlaıyor musun? O zaman devam et...", #imageLiteral(resourceName: "active"), bgOne, textColor, textColor, titleFont, descFont),
-            (#imageLiteral(resourceName: "contact"), "Yedeklemek bu kadar kolay", "Export Contact ile ücretli yedekleme uygulamalarını unutacaksınız. İki adımda yedeklemenın keyfini çıkarın", #imageLiteral(resourceName: "active"), bgTwo, textColor, textColor, titleFont, descFont),
-            (#imageLiteral(resourceName: "csv"), "CSV? - VCARD?", "Hangi uzantı ile yedeklemek istersin CSV olarak mı? VCARD olarak mı?", #imageLiteral(resourceName: "active"), bgThree, textColor, textColor, titleFont, descFont)
+            (#imageLiteral(resourceName: "export"), "Backup Your Contacts!", "With Export Contact you can easily back up your guide. Are you looking forward to backing up? Continue then...", #imageLiteral(resourceName: "active"), bgOne, textColor, textColor, titleFont, descFont),
+            (#imageLiteral(resourceName: "contact"), "Backup is that easy", "With Export Contact you will forget about paid backups. Enjoy backup in two steps.", #imageLiteral(resourceName: "active"), bgTwo, textColor, textColor, titleFont, descFont),
+            (#imageLiteral(resourceName: "csv"), "CSV? - VCARD?", "What extension do you want to back up? \n As CSV? As VCARD?", #imageLiteral(resourceName: "active"), bgThree, textColor, textColor, titleFont, descFont)
             ][index]
     }
     
